@@ -1,6 +1,6 @@
-export function getValidGrid() {
 
-    let grid = Array.from({ length: 9 }, () => Array(9).fill(0));
+// Generate a complete Sudoko grid
+export function getValidGrid(grid) {
 
     // Loop through enitre grid
     for(let row = 0; row < 9; row++) {

@@ -25,3 +25,5 @@ function createPuzzle(grid, missing_spaces) {
 
     return puzzle_grid;
 }
+
+export default createPuzzle;
