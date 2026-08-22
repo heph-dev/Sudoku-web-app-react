@@ -1,9 +1,15 @@
 
-function NumberPad() {
+function NumberPad({setChosennum, selected, updateCell}) {
     const nums = [1,2,3,4,5,6,7,8,9]
     return (
-        <div id="number-pad">
-            {nums.map((num) => <div className="number-pad-num">{num}</div>)}
+        <div id="number-pad" >
+            {nums.map((num) => <div className="number-pad-num" 
+            onClick={() => {
+                            if(selected != "") {
+                                updateCell(parseInt(selected[0]), parseInt(selected[1]), num)
+                            }
+                        }
+                    }>{num}</div>)}
         </div>
     )
 }

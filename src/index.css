@@ -33,6 +33,10 @@ body {
     border: 1px solid black;
     
 }
+
+.cell:hover {
+    background-color: rgba(0, 0, 0, 0.263);
+}
  
 .right-border {
     border-right: 3px solid black;
@@ -60,3 +64,10 @@ body {
     width: 50px;
     cursor: pointer;
 }
+
+.number-pad-num:hover {
+    background-color: rgba(0, 0, 0, 0.263);
+}
+
+
+

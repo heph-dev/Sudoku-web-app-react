@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Cell({ cellId, num, row, col, selected, setSelected }) {
+function Cell({ cellId, num, row, col, selected, setSelected}) {
     let className = "cell";
 
     if (col === 2 || col === 5) {
@@ -11,13 +11,16 @@ function Cell({ cellId, num, row, col, selected, setSelected }) {
         className += " bottom-border";
     }
 
-    if(selected==cellId) {
+    if(selected===cellId) {
         className += " clicked"
     }
 
     return (
         <div
-            onClick={() => setSelected(cellId)}
+            onClick={() => {
+                        setSelected(cellId);
+                    }
+            }
             className={className}
         >
             {num}

@@ -1,8 +1,7 @@
 import Cell from "./Cell.jsx"
 import { useState } from "react";
 
-function Board({board, setBoard}) {
-    const [selected, setSelected] = useState("");
+function Board({board, setBoard, chosennum, selected, setSelected}) {
 
     return (
         <div className="board">
