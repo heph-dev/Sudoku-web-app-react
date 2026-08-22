@@ -5,7 +5,6 @@ import NumberPad from './components/NumberPad.jsx'
 
 function App() {
   const[board, setBoard] = useState( Array(9).fill(null).map(() => Array(9).fill(0)));
-  const[chosennum, setChosennum] = useState(0);
   const[selected, setSelected] = useState("");
 
   function updateCell(row, col, num) {
@@ -19,14 +18,11 @@ function App() {
         )
     );
   }
-
-  //console.log(selected);
-  console.log(chosennum);
  
   return(
     <div className="app">
-      <NumberPad setChosennum={setChosennum} selected={selected} updateCell={updateCell}></NumberPad>
-      <Board board={board} setBoard={setBoard} chosennum={chosennum} selected={selected} setSelected={setSelected}></Board>
+      <NumberPad selected={selected} setSelected={setSelected} updateCell={updateCell}></NumberPad>
+      <Board board={board} setBoard={setBoard} selected={selected} setSelected={setSelected}></Board>
     </div>
     
   )
